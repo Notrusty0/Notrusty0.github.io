@@ -5,7 +5,7 @@ import headshot from "../../assets/headshot.jpg"
 
 export const About = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center py-20 bg-gray-100">
+    <section id="about" className="min-h-screen flex items-center justify-center py-20 bg-gray-300">
       <div className="w-full max-w-4xl px-6">
         {/* Reveal the section on scroll */}
         <RevealOnScroll>

@@ -3,6 +3,18 @@ import mailIcon from "../assets/email.svg"; // Replace with your email icon path
 import linkedinIcon from "../assets/linkedin.png"; // Replace with your LinkedIn icon path
 import artstationIcon from "../assets/artstation.svg"; // Replace with your ArtStation icon path
 
+// Smooth Scroll Function
+const smoothScroll = (e, targetId) => {
+  e.preventDefault();
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
+  }
+};
+
 // ScrambleText component
 const ScrambleText = ({ text, className = "" }) => {
   const [displayText, setDisplayText] = useState(text);
@@ -18,14 +30,13 @@ const ScrambleText = ({ text, className = "" }) => {
           .split("")
           .map((char, index) => {
             if (char === " ") return " "; // Keep spaces intact
-
             let randomChar;
             let prevChar = prevDisplayText[index];
 
             // Ensure randomChar is different from prevChar
             do {
               randomChar = uniqueChars[Math.floor(Math.random() * uniqueChars.length)];
-            } while (randomChar === prevChar); // Ensure it’s different from the previous character
+            } while (randomChar === prevChar);
 
             return randomChar;
           })
@@ -57,8 +68,12 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
     <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] border-transparent">
       <div className="mx-auto px-8">
         <div className="flex justify-between items-center h-40">
-          {/* Scramble the text on hover */}
-          <a href="#home" className="text-4xl font-bold text-black ml-20">
+          {/* Smooth Scrolling for Name */}
+          <a
+            href="#home"
+            onClick={(e) => smoothScroll(e, "home")}
+            className="text-4xl font-bold text-black ml-20 cursor-pointer"
+          >
             <ScrambleText text="Kyleigh Hartman" />
           </a>
 
@@ -70,16 +85,18 @@ export const Navbar = ({ menuOpen, setMenuOpen }) => {
           </div>
 
           <div className="hidden md:flex items-center space-x-5 gap-1">
-            {/* Apply ScrambleText for navigation links as well */}
+            {/* Smooth Scrolling for Navbar Links */}
             <a
               href="#about"
-              className="text-black font-bold text-2xl hover:text-gray-800 transition-colors"
+              onClick={(e) => smoothScroll(e, "about")}
+              className="text-black font-bold text-2xl hover:text-gray-800 transition-colors cursor-pointer"
             >
               <ScrambleText text="About" />
             </a>
             <a
               href="#projects"
-              className="text-black font-bold text-2xl hover:text-gray-800 transition-colors"
+              onClick={(e) => smoothScroll(e, "projects")}
+              className="text-black font-bold text-2xl hover:text-gray-800 transition-colors cursor-pointer"
             >
               <ScrambleText text="Projects" />
             </a>
