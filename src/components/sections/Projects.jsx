@@ -81,7 +81,7 @@ const ImageGalleryModal = ({ images, onClose }) => {
 const CustomArrow = ({ direction, onClick }) => (
   <button
     onClick={onClick}
-    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === "left" ? "-left-16" : "-right-16"} w-12 h-12 flex justify-center items-center bg-transparent text-4xl text-white rounded-full shadow-md hover:bg-transparent hover:scale-110 transition z-50`}
+    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === "left" ? "-left-16" : "-right-16"} w-12 h-12 flex justify-center items-center bg-transparent text-4xl text-white rounded-full hover:bg-transparent hover:scale-110 transition z-50`}
   >
     {/* Using a more universal left arrow Unicode character */}
     {direction === "left" ? "🡠" : "🡢"}
