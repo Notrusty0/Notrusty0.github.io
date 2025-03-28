@@ -47,11 +47,11 @@ const ImageGalleryModal = ({ images, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex justify-center items-center">
+    <div className="fixed inset-0 z-50 flex justify-center items-center" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
       {/* Close Button */}
       <button
         onClick={onClose}
-        className="absolute top-10 right-10 text-white text-3xl p-2 rounded-full hover:bg-transparent hover:rotate-180 hover:scale-110 transition-transform duration-500 bg-transparent"
+        className="absolute top-10 right-10 text-white text-3xl p-2 rounded-full hover:bg-transparent hover:rotate-180 hover:scale-110 transition-transform duration-500"
       >
         ✕
       </button>
@@ -81,7 +81,7 @@ const ImageGalleryModal = ({ images, onClose }) => {
 const CustomArrow = ({ direction, onClick }) => (
   <button
     onClick={onClick}
-    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === "left" ? "left-0" : "right-0"} w-12 h-12 flex justify-center items-center bg-transparent text-4xl text-white rounded-full shadow-md hover:bg-transparent hover:scale-110 transition z-50`}
+    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === "left" ? "-left-16" : "-right-16"} w-12 h-12 flex justify-center items-center bg-transparent text-4xl text-white rounded-full shadow-md hover:bg-transparent hover:scale-110 transition z-50`}
   >
     {/* Using a more universal left arrow Unicode character */}
     {direction === "left" ? "🡠" : "🡢"}

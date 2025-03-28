@@ -23,7 +23,7 @@ export const About = () => {
           </div>
 
           {/* About Text Box */}
-          <div className="text-center text-lg text-gray-600 leading-relaxed">
+          <div className="text-center text-lg text-black leading-relaxed font-bold">
             <p>
               Hello! My name is <strong>Kyleigh Hartman</strong>. I'm a passionate graphic designer and 3D modeler
               with experience in Photoshop, After Effects, Illustrator, InDesign, and 3DS Max. I love drawing, running,
