@@ -4,7 +4,7 @@ import Slider from "react-slick"; // Import Slick Carousel for the gallery
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import folder from "..//../assets/folder.svg";
+import folder from "../../assets/folder.svg";
 import img1 from "../../assets/projects/1.png";
 import img2 from "../../assets/projects/2.png";
 import img3 from "../../assets/projects/3.png";
@@ -47,11 +47,11 @@ const ImageGalleryModal = ({ images, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-center items-center" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
+    <div className="fixed inset-0 z-50 flex justify-center items-center bg-[rgba(10,10,10,0.8)] bg-opacity-20">
       {/* Close Button */}
       <button
         onClick={onClose}
-        className="absolute top-10 right-10 text-white text-3xl p-2 rounded-full hover:bg-transparent hover:rotate-180 hover:scale-110 transition-transform duration-500"
+        className="absolute top-10 right-10 text-white text-3xl p-2 rounded-full hover:rotate-180 hover:scale-110 transition-transform duration-500"
       >
         ✕
       </button>
@@ -65,7 +65,7 @@ const ImageGalleryModal = ({ images, onClose }) => {
                 <img
                   src={image}
                   alt={`large-image-${index}`}
-                  className="w-full h-full object-contain rounded-lg"
+                  className="w-screen h-screen object-cover rounded-lg" // Ensure fixed size and aspect ratio
                   onLoad={handleImageLoad}
                 />
               </div>
@@ -81,12 +81,12 @@ const ImageGalleryModal = ({ images, onClose }) => {
 const CustomArrow = ({ direction, onClick }) => (
   <button
     onClick={onClick}
-    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === "left" ? "-left-16" : "-right-16"} w-12 h-12 flex justify-center items-center bg-transparent text-4xl text-white rounded-full hover:bg-transparent hover:scale-110 transition z-50`}
+    className={`absolute top-1/2 transform -translate-y-1/2 ${direction === "left" ? "-left-16" : "-right-16"} w-12 h-12 flex justify-center items-center text-4xl text-white hover:scale-110 transition z-50`}
   >
-    {/* Using a more universal left arrow Unicode character */}
     {direction === "left" ? "🡠" : "🡢"}
   </button>
 );
+
 // Project Folder Card Component with Tilt Effect
 const ProjectCard = ({ index, name, image, galleryImages }) => {
   const [showModal, setShowModal] = useState(false);
@@ -94,17 +94,18 @@ const ProjectCard = ({ index, name, image, galleryImages }) => {
   return (
     <>
       <ParallaxTilt
-        options={{ max: 25, scale: 1.05, speed: 400 }} // Customizable tilt effect
-        className="bg-transparent p-5 rounded-2xl sm:w-[360px] w-full"
+        options={{ max: 25, scale: 1.05, speed: 400 }}
+        className="bg-transparent p-5 rounded-2xl"
+        style={{ width: "300px", height: "300px" }} // Fixed size
       >
         <div
-          className="relative w-full h-[230px] cursor-pointer"
+          className="relative w-[300px] h-[300px] cursor-pointer" // Ensures the container remains the same size
           onClick={() => setShowModal(true)}
         >
           <img
             src={image}
             alt="project-image"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover rounded-2xl" // Ensures consistent size and cover fit
           />
           <div className="absolute inset-0 flex justify-center items-center">
             <h3 className="text-gray-700 font-bold text-[24px]">{name}</h3>
@@ -142,7 +143,7 @@ export const Projects = () => {
 
   return (
     <section id="projects" className="min-h-screen flex items-center justify-center py-20">
-      <div className="flex justify-center items-center gap-7">
+      <div className="flex justify-center items-center gap-10 flex-wrap max-w-5xl">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

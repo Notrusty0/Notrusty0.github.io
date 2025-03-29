@@ -19,16 +19,16 @@ export const Home = () => {
   }, [images.length]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative">
-      {/* Slideshow container */}
-      <div className="relative w-full h-[800px] bg-transparent">
-        {/* Image with automatic switching */}
-        <img
-          src={images[currentIndex]} // Dynamically use the current image index
-          alt="Slideshow"
-          className="w-full h-full object-contain rounded-lg"
-        />
-      </div>
-    </section>
+<section id="home" className="h-screen flex flex-col justify-end relative pt-32">
+  {/* Slideshow container */}
+  <div className="relative w-full max-h-[calc(100vh-8rem)] bg-transparent">
+    {/* Image with automatic scaling */}
+    <img
+      src={images[currentIndex]} // Dynamically use the current image index
+      alt="Slideshow"
+      className="w-full h-full object-contain rounded-lg"
+    />
+  </div>
+</section>
   );
 };
