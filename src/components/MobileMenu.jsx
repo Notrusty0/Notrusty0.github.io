@@ -98,7 +98,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       {/* Social Media Icons with Hover Effect */}
       <div className="flex gap-5 mt-8">
         <a
-          href="Kyleigh@kyleighhartman.com" // Replace with your email address
+          href="mailto:Kyleigh@KyleighHartman.com" // Replace with your email address
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => setHoveredButton("mail")}
@@ -130,7 +130,7 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
           />
         </a>
         <a
-          href="https://www.artstation.com/your-profile" // Replace with your ArtStation URL
+          href="https://www.artstation.com/kyleighhartman/" // Replace with your ArtStation URL
           target="_blank"
           rel="noopener noreferrer"
           onMouseEnter={() => setHoveredButton("artstation")}

@@ -8,7 +8,7 @@ import folder from "../../assets/folder.svg";
 import img1 from "../../assets/projects/1.png";
 import img2 from "../../assets/projects/2.png";
 import img3 from "../../assets/projects/3.png";
-
+import skills from "../../assets/projects/Skills.png";
 // Modal Component with Swipeable Large Image
 const ImageGalleryModal = ({ images, onClose }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -83,7 +83,7 @@ const CustomArrow = ({ direction, onClick }) => (
     onClick={onClick}
     className={`absolute top-1/2 transform -translate-y-1/2 ${direction === "left" ? "-left-16" : "-right-16"} w-12 h-12 flex justify-center items-center text-4xl text-white hover:scale-110 transition z-50`}
   >
-    {direction === "left" ? "🡠" : "🡢"}
+    {direction === "left" ? "<" : ">"}
   </button>
 );
 
@@ -139,11 +139,16 @@ export const Projects = () => {
       image: folder,
       galleryImages: [img1, img2, img3],
     },
+    {
+      name: "Skills",
+      image: folder,
+      galleryImages: [skills],
+    },
   ];
 
   return (
     <section id="projects" className="min-h-screen flex items-center justify-center py-20">
-      <div className="flex justify-center items-center gap-10 flex-wrap max-w-5xl">
+      <div className="flex justify-center items-center gap-10 flex-wrap max-w-8xl">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
