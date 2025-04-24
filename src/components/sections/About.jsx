@@ -23,12 +23,16 @@ export const About = () => {
           </div>
 
           {/* About Text Box */}
-          <div className="text-center text-lg text-black leading-relaxed font-bold">
+          <div className="text-center text-lg text-black leading-relaxed font-medium space-y-4">
             <p>
-              Hello! My name is <strong>Kyleigh Hartman</strong>. I'm a passionate graphic designer and 3D modeler
-              with experience in Photoshop, After Effects, Illustrator, InDesign, and 3DS Max. I love drawing, running,
-              and traveling, and I'm always eager to learn new skills in any form. Feel free to reach out—I'd love to
-              connect!
+              Hello! My name is <strong>Kyleigh Hartman</strong>. I'm a passionate logo designer and 3D modeler with a love for drawing, running, and traveling. I'm always eager to learn new skills and grow as a creative professional.
+              I graduated from Oklahoma City Community College with an Associate’s Degree in Graphic Design and plan to continue my education at Oklahoma City University.
+            </p>
+            <p>  
+            Feel free to reach out—I'd love to connect!{" "}
+            <a href="mailto:Kyleigh@KyleighHartman.com" className="text-blue-600 underline hover:text-blue-800">
+            Kyleigh@KyleighHartman.com
+            </a>
             </p>
           </div>
         </RevealOnScroll>

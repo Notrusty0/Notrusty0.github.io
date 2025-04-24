@@ -2,10 +2,15 @@ import React, { useState, useEffect } from "react";
 
 import img1 from "../../assets/projects/1.png"; 
 import img2 from "../../assets/projects/2.png"; 
-import img3 from "../../assets/projects/3.png"; 
+import img3 from "../../assets/projects/4.png"; 
+
+import img4 from "../../assets/projects/5.png"; 
+import img5 from "../../assets/projects/6.png"; 
+import img6 from "../../assets/projects/7.png"; 
+
 
 export const Home = () => {
-  const images = [img1,img2,img3]; // Array to store the image imports
+  const images = [img1,img2,img3, img4, img5, img6]; // Array to store the image imports
   const [currentIndex, setCurrentIndex] = useState(0); // State to track current image
 
   // useEffect to automatically switch images every 3 seconds

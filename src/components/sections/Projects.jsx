@@ -5,9 +5,21 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import folder from "../../assets/folder.svg";
-import img1 from "../../assets/projects/1.png";
-import img2 from "../../assets/projects/2.png";
-import img3 from "../../assets/projects/3.png";
+import TnCL from "../../assets/projects/3.jpg";
+import TnC1 from "../../assets/projects/1.png";
+import TnC2 from "../../assets/projects/2.png";
+import TnC3 from "../../assets/projects/4.png";
+
+import arcadialogo from "../../assets/projects/8.jpg";
+import arcadia1 from "../../assets/projects/5.png";
+import arcadia2 from "../../assets/projects/6.png";
+import arcadia3 from "../../assets/projects/7.png";
+
+import art from "../../assets/projects/9.jpg";
+import art1 from "../../assets/projects/10.jpg";
+import art2 from "../../assets/projects/11.jpg";
+import art3 from "../../assets/projects/12.jpg";
+
 import skills from "../../assets/projects/Skills.png";
 // Modal Component with Swipeable Large Image
 const ImageGalleryModal = ({ images, onClose }) => {
@@ -65,7 +77,7 @@ const ImageGalleryModal = ({ images, onClose }) => {
                 <img
                   src={image}
                   alt={`large-image-${index}`}
-                  className="w-screen h-screen object-cover rounded-lg" // Ensure fixed size and aspect ratio
+                  className="w-screen h-screen object-contain rounded-lg" // Ensure fixed size and aspect ratio
                   onLoad={handleImageLoad}
                 />
               </div>
@@ -127,17 +139,17 @@ export const Projects = () => {
     {
       name: "Graphic Design",
       image: folder,
-      galleryImages: [img1, img2, img3],
+      galleryImages: [TnCL, TnC1, TnC2, TnC3, arcadialogo, arcadia1, arcadia2, arcadia3],
     },
     {
       name: "3D Modeling",
       image: folder,
-      galleryImages: [img1, img2, img3],
+      galleryImages: [, , , ],
     },
     {
-      name: "Misc",
+      name: "Digital Art",
       image: folder,
-      galleryImages: [img1, img2, img3],
+      galleryImages: [art,art1 ,art2,art3],
     },
     {
       name: "Skills",
