@@ -20,6 +20,32 @@ import art1 from "../../assets/projects/10.jpg";
 import art2 from "../../assets/projects/11.jpg";
 import art3 from "../../assets/projects/12.jpg";
 
+import sword from "../../assets/projects/15.png";
+import sword2 from "../../assets/projects/16.png";
+import sword3 from "../../assets/projects/17.png";
+import sword4 from "../../assets/projects/18.png";
+
+import tree from "../../assets/projects/19.png";
+import tree2 from "../../assets/projects/20.png";
+
+import ruin from "../../assets/projects/21.png";
+import ruin2 from "../../assets/projects/22.png";
+
+import milk from "../../assets/projects/23.jpg";
+
+import treeR from "../../assets/projects/24.png";
+import treer2 from "../../assets/projects/25.png";
+import treer3 from "../../assets/projects/26.png";
+import treer4 from "../../assets/projects/27.png";
+
+import treeR from "../../assets/projects/24.png";
+import treer2 from "../../assets/projects/25.png";
+
+import neoorganic from "../../assets/projects/13.jpg";
+import car from "../../assets/projects/14.png";
+import watch from "../../assets/projects/29.png";
+import barrel from "../../assets/projects/28.png";
+
 import skills from "../../assets/projects/Skills.png";
 // Modal Component with Swipeable Large Image
 const ImageGalleryModal = ({ images, onClose }) => {
@@ -139,17 +165,17 @@ export const Projects = () => {
     {
       name: "Graphic Design",
       image: folder,
-      galleryImages: [TnCL, TnC1, TnC2, TnC3, arcadialogo, arcadia1, arcadia2, arcadia3],
+      galleryImages: [TnCL, TnC1, TnC2, TnC3, arcadialogo, arcadia1, arcadia2, arcadia3,neoorganic,car,barrel,watch],
     },
     {
       name: "3D Modeling",
       image: folder,
-      galleryImages: [, , , ],
+      galleryImages: [sword,sword2,sword3,sword4,ruin,ruin2,tree,tree2],
     },
     {
       name: "Digital Art",
       image: folder,
-      galleryImages: [art,art1 ,art2,art3],
+      galleryImages: [art,art1 ,art2,art3,milk,],
     },
     {
       name: "Skills",
